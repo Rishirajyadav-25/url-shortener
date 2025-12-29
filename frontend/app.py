@@ -1,7 +1,11 @@
 import streamlit as st
 import requests
+import os
+from dotenv import load_dotenv
 
-BACKEND_URL = "http://localhost:8000"
+load_dotenv()
+# BACKEND_URL = "http://localhost:8000"
+BACKEND_URL =  os.getenv("BASE_URL")
 
 st.set_page_config(page_title="URL Shortener", page_icon="🔗")
 
