@@ -19,6 +19,7 @@ services:
       - PYTHONPATH=/app/frontend
     command: streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0
     ports:
-      - "8501:8501"
+      # - "8501:8501"
+      - "80:8501"
     env_file:
       - .env
