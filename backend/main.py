@@ -36,6 +36,7 @@ async def create_short_url(request: ShortenURLRequest):
     }
     
     await url_collection.insert_one(document)
+    
 
     return {
     "short_url": f"{BASE_URL}/{short_code}"
