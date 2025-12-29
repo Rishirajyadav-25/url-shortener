@@ -3,6 +3,9 @@ version: "3.9"
 services:
   backend:
     build: .
+    # Add the environment section below
+    environment:
+      - PYTHONPATH=/app/backend
     command: uvicorn backend.main:app --host 0.0.0.0 --port 8000
     ports:
       - "8000:8000"
@@ -11,6 +14,9 @@ services:
 
   frontend:
     build: .
+    # Add the environment section below
+    environment:
+      - PYTHONPATH=/app/frontend
     command: streamlit run frontend/app.py --server.port 8501 --server.address 0.0.0.0
     ports:
       - "8501:8501"
