@@ -1,2 +1,8 @@
+# Environment variables (files)
 .env
-.venv
+.env.local
+
+# Python virtual environments (folders)
+.venv/
+venv/
+env/
