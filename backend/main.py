@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
-from models import ShortenURLRequest, ShortenURLResponse
-from database import url_collection
+from backend.models import ShortenURLRequest, ShortenURLResponse
+from backend.database import url_collection
 import random
 import string
 from datetime import datetime,timezone
